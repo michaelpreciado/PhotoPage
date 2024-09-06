@@ -6,12 +6,12 @@
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2rem; /* Reduced font size for mobile */
   font-family: 'Montserrat';
   font-weight: normal;
   color: #43434356;
   text-align: center;
-  margin: 2rem 0;
+  margin: 1.5rem 0; /* Reduced margin */
 }
 
 .wrapper {
@@ -32,7 +32,7 @@ h1 {
 }
 
 .col {
-  width: calc(25% - 2rem);
+  width: calc(25% - 2rem); /* Adjust column width */
   margin: 1rem;
   cursor: pointer;
 }
@@ -62,7 +62,7 @@ h1 {
   height: auto;
   border-radius: 10px;
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1.2rem; /* Reduced font size */
 }
 
 .back {
@@ -149,14 +149,14 @@ h1 {
 }
 
 .front .inner p {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  font-size: 1.5rem; /* Reduced font size */
+  margin-bottom: 1.5rem; /* Reduced margin */
   position: relative;
 }
 
 .front .inner p:after {
   content: '';
-  width: 4rem;
+  width: 3rem;
   height: 2px;
   position: absolute;
   background: #699bc1f9;
@@ -173,22 +173,25 @@ h1 {
   font-weight: 300;
 }
 
+/* Tablet and larger mobile screens */
 @media screen and (max-width: 64rem) {
   .col {
-    width: calc(33.333333% - 2rem);
+    width: calc(33.333333% - 2rem); /* Adjust for larger screens */
   }
 }
 
+/* Mobile screens */
 @media screen and (max-width: 48rem) {
   .col {
-    width: calc(50% - 2rem);
+    width: calc(50% - 2rem); /* Two columns for smaller screens */
   }
 }
 
+/* Small mobile screens */
 @media screen and (max-width: 32rem) {
   .col {
     width: 100%;
-    margin: 0 0 2rem 0;
+    margin: 0 0 2rem 0; /* Single column for very small screens */
   }
 }
 
@@ -201,4 +204,3 @@ h1 {
   height: 100%;
   background-size: calc(100% + 200px);
 }
-
