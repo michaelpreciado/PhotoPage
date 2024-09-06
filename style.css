@@ -180,23 +180,23 @@ h1 {
   }
 }
 
-/* Mobile screens */
-@media screen and (max-width: 48rem) {
+/* 2 columns for tablet size screens */
+@media screen and (max-width: 1024px) {
   .col {
-    width: calc(50% - 2rem); /* Two columns for smaller screens */
+    flex: 1 1 calc(50% - 1rem); /* 2 columns on tablet */
   }
 }
 
-/* Small mobile screens */
-@media screen and (max-width: 32rem) {
+/* 1 column for mobile size screens */
+@media screen and (max-width: 768px) {
   .col {
-    width: 100%;
-    margin: 0 0 2rem 0; /* Single column for very small screens */
+    flex: 1 1 100%; /* Full width (1 column) on mobile */
+    margin: 0.5rem 0; /* Adjust margin for stacked layout */
   }
 }
 
 #top-image {
-  background: url('sunset.jpeg') -25px -50px;
+  background: url('ocean3.jpeg') -25px -50px;
   position: fixed;
   top: 0;
   width: 100%;
