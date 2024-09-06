@@ -9,10 +9,22 @@
         /* Just a little CSS humor */
         body { font-family: 'Montserrat', sans-serif; }
         .hover { transform: scale(1.05); transition: all 0.3s ease; }
+
+        /* Mobile view */
+        @media (max-width: 768px) {
+            .cols {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .col {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
     </style>
 </head>
 <body>
-
     <div class="wrapper">
         <h1>2024</h1>
         <div class="cols">
