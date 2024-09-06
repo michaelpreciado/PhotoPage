@@ -9,7 +9,7 @@ h1 {
   font-size: 2rem; /* Reduced font size for mobile */
   font-family: 'Montserrat';
   font-weight: normal;
-  color: #43434356;
+  color: #f7f7f7f0;
   text-align: center;
   margin: 1.5rem 0; /* Reduced margin */
 }
@@ -47,7 +47,7 @@ h1 {
 .front,
 .back {
   background-size: cover;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.25);
+  box-shadow: 0 4px 8px 0 rgb(0, 0, 0);
   border-radius: 10px;
   background-position: center;
   -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
@@ -61,15 +61,15 @@ h1 {
   min-height: 280px;
   height: auto;
   border-radius: 10px;
-  color: #fff;
+  color: #787878f4;
   font-size: 1.2rem; /* Reduced font size */
 }
 
 .back {
-  background: #e7e8e9;
+  background: #bfc0c0;
   background: -webkit-linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
-  background: -o-linear-gradient(45deg,  #a9b5be 0%,#596a72 100%);
-  background: linear-gradient(45deg,  #a7b2ba 0%,#2b5282 100%);
+  background: -o-linear-gradient(45deg,  #a9b5be 0%,#cccecf93 100%);
+  background: linear-gradient(45deg,  #a7b2ba 0%,#e7e8ea92 100%);
 }
 
 .front:after {
@@ -82,7 +82,7 @@ h1 {
   content: '';
   display: block;
   opacity: .6;
-  background-color: #000;
+  background-color: #000000;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   border-radius: 10px;
@@ -159,7 +159,7 @@ h1 {
   width: 3rem;
   height: 2px;
   position: absolute;
-  background: #699bc1f9;
+  background: #dedede8d;
   display: block;
   left: 0;
   right: 0;
