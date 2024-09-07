@@ -180,7 +180,7 @@ h1 {
 @media screen and (max-width: 768px) {
   .col {
     flex: 1 1 46%; /* Make each container half the size */
-    margin: 0.5rem; /* Adjust margin for smaller containers */
+    margin: 0.4rem; /* Adjust margin for smaller containers */
   }
 }
 #top-image {
