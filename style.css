@@ -179,7 +179,7 @@ h1 {
 /* 1 column for mobile size screens */
 @media screen and (max-width: 768px) {
   .col {
-    flex: 1 1 47%; /* Make each container half the size */
+    flex: 1 1 46%; /* Make each container half the size */
     margin: 0.5rem; /* Adjust margin for smaller containers */
   }
 }
