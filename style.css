@@ -2,16 +2,17 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 h1 {
-  font-size: 2rem; /* Reduced font size for mobile */
-  font-family: 'Montserrat';
-  font-weight: normal;
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
   color: #f7f7f7f0;
   text-align: center;
-  margin: 1.5rem 0; /* Reduced margin */
+  margin: 1.5rem 0;
+  letter-spacing: 0.5px;
 }
 
 .wrapper {
@@ -21,56 +22,44 @@ h1 {
 }
 
 .cols {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .col {
-  width: calc(25% - 2rem); /* Adjust column width */
+  width: calc(25% - 2rem);
   margin: 1rem;
   cursor: pointer;
 }
 
 .container {
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-perspective: 1000px;
-          perspective: 1000px;
+  transform-style: preserve-3d;
+  perspective: 1000px;
 }
 
 .front,
 .back {
   background-size: cover;
-  box-shadow: 0 4px 8px 0 rgb(0, 0, 0);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   background-position: center;
-  -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
-  transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
-  -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
-  transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
-  transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  transition: transform 0.7s ease-in-out;
+  backface-visibility: hidden;
   text-align: center;
   min-height: 280px;
   height: auto;
   border-radius: 10px;
   color: #ffffff;
-  font-size: 1.5rem; /* Reduced font size */
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
 
+
 .back {
-  background: #202020;
-  background: -webkit-linear-gradient(45deg,  #ebeced 0%,#151515e1 100%);
-  background: -o-linear-gradient(45deg,  #a9b5bec4 0%,#cccecf93 100%);
-  background: linear-gradient(45deg,  #89868a 0%,#9f979ff2 100%);
+  background: linear-gradient(45deg, #89868a 0%, #9f979ff2 100%);
 }
+
 
 .front:after {
   position: absolute;
@@ -82,7 +71,7 @@ h1 {
   content: '';
   display: block;
   opacity: .6;
-  background-color: #ffffff3d;
+  background-color: #ffffff1d;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   border-radius: 10px;
@@ -148,53 +137,52 @@ h1 {
           transform-style: preserve-3d;
 }
 
-.front .inner p {
-  font-size: 1.5rem; /* Reduced font size */
-  margin-bottom: 1.5rem; /* Reduced margin */
-  position: relative;
+
+.inner p {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
 }
 
-.front .inner p:after {
+.front:after {
   content: '';
-  width: 3rem;
-  height: 2px;
   position: absolute;
-  background: #dedede8d;
-  display: block;
+  top: 0;
   left: 0;
-  right: 0;
-  margin: 0 auto;
-  bottom: -.75rem;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
 }
 
-.front .inner span {
-  color: rgba(255,255,255,0.7);
-  font-family: 'Montserrat';
+.inner span {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: 'Montserrat', sans-serif;
   font-weight: 300;
 }
 
 /* Tablet and larger mobile screens */
 @media screen and (max-width: 64rem) {
   .col {
-    width: calc(33.333333% - 2rem); /* Adjust for larger screens */
+    width: calc(33.333333% - 2rem);
   }
 }
+
 
 /* 2 columns for tablet size screens */
 @media screen and (max-width: 1024px) {
   .col {
-    flex: 1 1 calc(50% - 1rem); /* 2 columns on tablet */
+    flex: 1 1 calc(50% - 1rem);
   }
 }
-
 /* 1 column for mobile size screens */
 @media screen and (max-width: 768px) {
   .col {
-    flex: 1 1 100%; /* Full width (1 column) on mobile */
-    margin: 0.5rem 0; /* Adjust margin for stacked layout */
+    flex: 1 1 47%; /* Make each container half the size */
+    margin: 0.5rem; /* Adjust margin for smaller containers */
   }
 }
-
 #top-image {
   background: url('ocean3.jpeg') -25px -50px;
   position: fixed;
@@ -204,12 +192,14 @@ h1 {
   height: 100%;
   background-size: calc(100% + 200px);
 }
+
 html {
   height: 100%;
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0ff5 100%);
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   overflow: auto;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
 }
-
 #stars {
   width: 1px;
   height: 1px;
