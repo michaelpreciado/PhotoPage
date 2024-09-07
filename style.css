@@ -204,11 +204,10 @@ h1 {
   height: 100%;
   background-size: calc(100% + 200px);
 }
-
 html {
   height: 100%;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0ff5 100%);
-  overflow: hidden;
+  overflow: auto;
 }
 
 #stars {
